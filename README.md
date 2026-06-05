@@ -1,45 +1,45 @@
 # Loma Microfinance Bank — Shareholder Reports
 
-Official, self-contained interactive shareholder reports for Loma Microfinance Bank.
+Official, self-contained interactive shareholder reports for Loma
+Microfinance Bank.
 
-Each report is a single HTML file with all assets (fonts, images, audio, CSS, JS)
-bundled inline — open it in any modern browser and the entire report renders
-locally, with no network required.
+The report is a single HTML file with all assets (fonts, images, audio,
+CSS, JS) bundled inline — open it in any modern browser and the entire
+report renders locally, with no network required.
 
-## Contents
-
-| Report | File |
-|---|---|
-| Mid-Year Shareholders Report — June 2026 | [`Loma Mid-Year Shareholders Report (standalone).html`](Loma%20Mid-Year%20Shareholders%20Report%20%28standalone%29.html) |
-
-A small landing page ([`index.html`](index.html)) lists all reports with cover
-art and quick links.
-
-## View the reports
+## View the report
 
 **Option 1 — open locally**
 
-Download or clone the repo and double-click `index.html` (or any
-`*.html` report file). Modern Chrome, Edge, Firefox, and Safari all
-work. No build step, no install.
+Download or clone the repo and double-click `index.html`. Modern Chrome,
+Edge, Firefox, and Safari all work. No build step, no install.
 
 **Option 2 — host on GitHub Pages**
 
 This repo ships with a workflow (`.github/workflows/pages.yml`) that
-publishes the landing page and all reports to GitHub Pages on every
-push to `main`.
+publishes `index.html` to GitHub Pages on every push to `main`.
 
 To turn it on:
 
 1. Go to **Settings → Pages** in this repository.
 2. Under **Build and deployment → Source**, choose **GitHub Actions**.
-3. Push to `main` (or re-run the latest workflow). The site will deploy
-   to `https://<owner>.github.io/Loma-Shareholder-Reports/`.
+3. Push to `main` (or re-run the latest workflow). The site deploys to
+   `https://<owner>.github.io/Loma-Shareholder-Reports/` and visitors
+   land straight in the report.
+
+## Soundtrack
+
+The report includes a soundtrack ("Loma Dey For You") that autoplays as
+soon as the browser allows. Modern browsers block unmuted autoplay
+until the user has interacted with the page, so when autoplay is
+rejected the player latches onto the very first click, tap, scroll, or
+keypress and starts playing then. Visitors can also toggle playback
+with the **Tap to play soundtrack** button in the corner.
 
 ## How the report renders
 
-The standalone HTML is produced by an inline "bundler" — a small script
-embedded in `<head>` that, on `DOMContentLoaded`:
+The HTML is produced by an inline "bundler" — a small script embedded
+in `<head>` that, on `DOMContentLoaded`:
 
 1. Reads the base64 asset manifest (`<script type="__bundler/manifest">`).
 2. Optionally decompresses each asset with `DecompressionStream('gzip')`.
@@ -50,6 +50,8 @@ embedded in `<head>` that, on `DOMContentLoaded`:
    Subresource Integrity).
 6. Replaces `<html>` with the unpacked document and re-creates each
    `<script>` so it executes (DOM-inserted scripts are inert per spec).
+7. Attempts to autoplay the soundtrack; on rejection, arms a
+   one-shot listener for the first user gesture.
 
 Because everything is decoded client-side, the file is fully portable —
 email it, drop it on a USB stick, or host it anywhere static files are
@@ -59,20 +61,11 @@ served.
 
 ```
 .
-├── .github/workflows/pages.yml       # Auto-deploy to GitHub Pages
-├── .nojekyll                         # Disable Jekyll processing
-├── index.html                        # Landing page (lists all reports)
-├── Loma Mid-Year Shareholders Report (standalone).html
+├── .github/workflows/pages.yml   # Auto-deploy to GitHub Pages
+├── .nojekyll                     # Disable Jekyll processing
+├── index.html                    # The report (self-contained, ~24 MB)
 └── README.md
 ```
-
-## Adding a new report
-
-1. Drop the new standalone `.html` file at the repository root.
-2. Add an entry to the `Contents` table above.
-3. Add a new `<article class="card">` block to `index.html` (copy an
-   existing one and adjust title, date, description, and `href`).
-4. Commit and push — the Pages workflow takes care of the rest.
 
 ---
 
