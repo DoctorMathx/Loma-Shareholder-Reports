@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Loma Microfinance Bank — Shareholder Reports</title>
+<meta name="description" content="Official mid-year and annual shareholder reports from Loma Microfinance Bank.">
+<meta property="og:title" content="Loma Microfinance Bank — Shareholder Reports">
+<meta property="og:description" content="Official shareholder reports from Loma Microfinance Bank.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231D2A7A'/%3E%3Cg fill='none' stroke='%23A8D1F2' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M11 9 v14 h8'/%3E%3Cpath d='M17 9 q3 0 3 4 q0 4 -3 4 h-2'/%3E%3C/g%3E%3C/svg%3E">
+<style>
+  :root {
+    --loma-blue: #1D2A7A;
+    --loma-sky: #A8D1F2;
+    --loma-stone: #F4F0E8;
+    --loma-warm: #FAF6EE;
+    --loma-silver: #B7BDC9;
+    --loma-ink: #0E1538;
+    --loma-muted: #5A6378;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { min-height: 100%; }
+  body {
+    font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    color: var(--loma-ink);
+    background:
+      radial-gradient(1100px 700px at 80% -10%, rgba(168,209,242,0.35), transparent 60%),
+      radial-gradient(900px 600px at -10% 110%, rgba(29,42,122,0.18), transparent 60%),
+      linear-gradient(180deg, var(--loma-warm) 0%, #ffffff 60%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 56px 28px 96px; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand .mark {
+    width: 40px; height: 40px; border-radius: 9px;
+    background: var(--loma-blue);
+    display: grid; place-items: center;
+  }
+  .brand .mark svg { width: 24px; height: 24px; }
+  .brand .name { font-weight: 700; letter-spacing: 0.5px; color: var(--loma-blue); }
+  .brand .name small { font-weight: 500; color: var(--loma-muted); letter-spacing: 0.4px; }
+
+  .hero { margin-top: 56px; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--loma-blue); font-weight: 600; letter-spacing: 3px;
+    font-size: 12px; text-transform: uppercase;
+  }
+  .eyebrow::before { content: ""; width: 28px; height: 2px; background: var(--loma-blue); display: inline-block; }
+  .hero h1 {
+    margin-top: 18px;
+    font-size: clamp(40px, 6vw, 64px);
+    line-height: 1.04; letter-spacing: -0.02em;
+    color: var(--loma-blue); font-weight: 800;
+  }
+  .hero p.lead {
+    margin-top: 18px; max-width: 720px;
+    font-size: clamp(16px, 1.5vw, 19px); color: #2a3350;
+  }
+
+  .reports { margin-top: 56px; display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+  .card {
+    position: relative; overflow: hidden;
+    border-radius: 18px;
+    background: #ffffff;
+    border: 1px solid rgba(29,42,122,0.10);
+    box-shadow: 0 1px 0 rgba(29,42,122,0.04), 0 18px 38px -22px rgba(29,42,122,0.25);
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    display: flex; flex-direction: column;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 1px 0 rgba(29,42,122,0.04), 0 26px 50px -22px rgba(29,42,122,0.32); border-color: rgba(29,42,122,0.20); }
+  .card .thumb {
+    aspect-ratio: 3 / 2;
+    background:
+      radial-gradient(120% 80% at 20% 0%, rgba(168,209,242,0.45), transparent 55%),
+      linear-gradient(160deg, #243399 0%, #1D2A7A 60%, #0E1538 100%);
+    display: grid; place-items: center;
+    color: #fff;
+  }
+  .card .thumb svg { width: 64%; height: auto; opacity: 0.96; }
+  .card .body { padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 12px; }
+  .card .meta { display: flex; align-items: center; gap: 10px; color: var(--loma-muted); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; }
+  .card .meta .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--loma-blue); }
+  .card h2 { font-size: 22px; line-height: 1.25; color: var(--loma-blue); font-weight: 700; letter-spacing: -0.01em; }
+  .card .desc { color: #3b4360; font-size: 15px; }
+  .card .row { margin-top: 8px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 11px 18px; border-radius: 10px;
+    background: var(--loma-blue); color: #fff; text-decoration: none;
+    font-weight: 600; font-size: 14px;
+    transition: background .15s ease, transform .15s ease;
+  }
+  .btn:hover { background: #16205e; transform: translateY(-1px); }
+  .btn.secondary { background: transparent; color: var(--loma-blue); border: 1px solid rgba(29,42,122,0.25); }
+  .btn.secondary:hover { background: rgba(29,42,122,0.05); }
+  .btn svg { width: 14px; height: 14px; }
+
+  .note {
+    margin-top: 56px; padding: 18px 22px;
+    background: rgba(168,209,242,0.18);
+    border: 1px solid rgba(29,42,122,0.10);
+    border-radius: 12px;
+    color: #2a3350; font-size: 14px;
+  }
+  .note strong { color: var(--loma-blue); }
+
+  footer {
+    margin-top: 64px; padding-top: 22px;
+    border-top: 1px solid rgba(29,42,122,0.10);
+    color: var(--loma-muted); font-size: 13px;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  }
+  footer a { color: var(--loma-blue); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    .wrap { padding: 40px 18px 72px; }
+    .hero { margin-top: 36px; }
+    .reports { margin-top: 36px; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" stroke="#A8D1F2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 9 v14 h8"/>
+            <path d="M17 9 q3 0 3 4 q0 4 -3 4 h-2"/>
+          </g>
+        </svg>
+      </div>
+      <div class="name">Loma Bank<br><small>One Bank. Infinite Possibilities.</small></div>
+    </div>
+
+    <section class="hero">
+      <span class="eyebrow">Investor Relations</span>
+      <h1>Shareholder Reports</h1>
+      <p class="lead">Official reports from Loma Microfinance Bank — published for shareholders and prospective investors. Each report is a self-contained interactive document with embedded media; just click and read.</p>
+    </section>
+
+    <section class="reports">
+      <article class="card">
+        <div class="thumb" aria-hidden="true">
+          <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke="#A8D1F2" stroke-width="34" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M505 300 v200 h190"></path>
+              <path d="M640 300 q55 0 55 60 q0 60 -55 60 h-30"></path>
+            </g>
+            <text x="600" y="610" fill="#FFFFFF" font-family="Archivo, system-ui, sans-serif" font-size="60" font-weight="800" letter-spacing="6" text-anchor="middle">LOMA BANK</text>
+            <text x="600" y="668" fill="#A8D1F2" font-family="Archivo, system-ui, sans-serif" font-size="24" letter-spacing="10" text-anchor="middle">MID-YEAR REPORT</text>
+          </svg>
+        </div>
+        <div class="body">
+          <div class="meta"><span>June 2026</span><span class="dot"></span><span>Mid-Year</span></div>
+          <h2>Mid-Year Shareholders Report</h2>
+          <p class="desc">A premium editorial review of Loma Microfinance Bank's performance, growth, governance, and long-term vision for the first half of 2026.</p>
+          <div class="row">
+            <a class="btn" href="Loma%20Mid-Year%20Shareholders%20Report%20%28standalone%29.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+              Open report
+            </a>
+            <a class="btn secondary" href="Loma%20Mid-Year%20Shareholders%20Report%20%28standalone%29.html" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12"/><path d="M6 12l6 6 6-6"/><path d="M5 20h14"/></svg>
+              Download
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <div class="note">
+      <strong>Tip:</strong> The report is a single self-contained HTML file with embedded fonts, images and audio. It opens directly in any modern browser — no internet connection or extra files required.
+    </div>
+
+    <footer>
+      <div>© <span id="yr"></span> Loma Microfinance Bank Limited</div>
+      <div><a href="https://github.com/DoctorMathx/Loma-Shareholder-Reports">View source on GitHub</a></div>
+    </footer>
+  </div>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
